@@ -1,0 +1,313 @@
+
+
+*{
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Outfit", sans-serif;
+    color:azure;
+}
+.main{
+    background-color: rgb(0, 0, 56);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+
+}
+.main>.section{
+    width: 100%;
+}
+
+.main .home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main nav{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.main nav a{
+    text-decoration: none;
+    color: #FAF9F6;
+    font-size: 1.5rem;
+}
+
+.main a:hover{
+    color: rgb(14, 245, 18);
+}
+
+.primary-heading{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.plain-text{
+    font-size: 1.4rem;
+}
+
+span{
+    color: rgb(14, 245, 18);
+
+}
+
+.head h1:hover{
+    color: rgb(14, 245, 18);
+
+}
+
+.home-icons svg{
+    width: 6%;
+}
+
+.home .prof-pic{
+    height: 400px;
+    width: 400px;
+    background: rgb(14, 245, 18)d4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+
+}
+
+.prof-pic img{
+    height: 410px;
+    width: 400px;
+    margin-top: -10px;
+
+
+}
+
+.home .prof-pic:hover{
+    img{transform: translateY(-30px) scale(1.3); transition: transform .3s;}
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    height: 100vh;
+    text-align: justify;
+}
+
+.about-image{
+    height: 400px;
+    width: 400px;
+    border: 10px rgb(14, 245, 18) solid;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgb(14, 245, 18), 0px 0px 40px rgb(14, 245, 18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.about-image img{
+    height: 100%;
+
+}
+.about-text{
+    width: 50%;
+    text-align: justify;
+}
+
+.service, .project{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+
+.card{
+    height: 400px;
+    width: 350px;
+    border: 1px rgb(14, 245, 18) solid;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+    h5{
+    text-align: center;
+    }
+    img{
+        width: 50%;
+    }
+}
+
+.skill-text{
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding: 20px;
+    text-align: justify;
+}
+
+.card img{
+    filter: grayscale(100%);
+}
+
+.service:hover .card{
+    filter: grayscale(0%);
+    
+}
+
+.card:hover{
+    border: 2px rgb(14, 245, 18) solid;
+    box-shadow: 1px 1px 10px 5px rgb(14, 245, 18);
+}
+
+.card:hover img{
+    filter: grayscale(0%);
+    transform: scale(1.2);
+    transition: all 0.5s linear;
+    
+
+}
+
+.project .card{
+    overflow: hidden;
+}
+
+.project .card:hover{
+    border: 2px rgb(14, 245, 18) solid;
+    box-shadow: 1px 1px 10px 5px rgb(14, 245, 18);
+}
+    
+.project img{
+    height: 80%;
+}
+
+.project .info{
+    height: 75px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgba(244,255,255,0.44);
+    position: relative;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    backdrop-filter:blur(6px);
+}
+
+.project .card:hover .info{
+    animation: drag 1s forwards;
+}
+
+@keyframes drag{
+    to{
+        transform: translateY(-250px);
+        background-color: #FAF9F6;
+        opacity: 0.7 ;
+        color: black;
+    }
+
+}
+
+.contact{
+    margin-top: 100px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    .contact-inner{
+        height: 70vh;
+        width: 70%;
+        display: flex;
+        border-radius: 10px;
+        .contact-right{
+            border-radius: 10px 0px 0px 10px;
+            height: 100%;
+            width: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 100%;
+                object-fit: cover;
+                aspect-ratio: 5/4;
+                backdrop-filter: screen;
+            }
+        }
+        .contact-left{
+            height: 100%;
+            width: 50%;
+            background-color: rgb(14, 245, 18);
+            border-radius: 0px 10px 10px 0px;
+            form{
+                width: 70%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: auto;
+                gap:30px;
+                margin-top: 50px;
+            }
+            input{
+                background: none;
+                height: 60px;
+                border-top-color: transparent;
+                border-left-color: transparent;
+                outline: none;
+                box-shadow: 3px 3px 5px black;
+                font-size: 1.2rem;
+                color: #000038;
+            }
+            textarea{
+                resize: none;
+                height: 100px;
+                font-size: 1rem;
+                box-shadow: 3px 3px 5px black;
+            }
+            input:focus{
+                background-color: gainsboro;
+                border: 2px darkblue solid;
+            }
+            input::placeholder{
+                position: relative;
+                left: 5px;
+                font-size: 1rem;
+            }
+            input[type='submit']{
+                height: 55px;
+                background-color: #000038;
+                color: white;
+                font-size: 1.5rem;
+                outline: 2px white solid;
+                outline-offset: -7px;
+                box-shadow: none;
+            }
+            input[type='submit']:hover{
+                outline: 2px solid #000038;
+                outline-offset: 5px;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+    
+
+}
